@@ -13,7 +13,7 @@ class Dashboard extends Component {
     const { user } = this.props.auth;
 
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div style={{ height: "40vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align">
             <h4>
@@ -24,10 +24,23 @@ class Dashboard extends Component {
             </h4>
             <button
               style={{
+                width: "200px",
+                borderRadius: "3px",
+                letterSpacing: "1.5px",
+                marginTop: "3rem"
+              }}
+              // onClick={this.onLogoutClick}
+              className="btn btn-large waves-effect waves-light hoverable grey accent-3"
+            >
+              Saved Recipes
+            </button>
+            <br></br>
+            <button
+              style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                marginTop: "1rem"
+                marginTop: "3rem"
               }}
               onClick={this.onLogoutClick}
               className="btn btn-large waves-effect waves-light hoverable red accent-3"

@@ -9,16 +9,17 @@ import { Link } from "react-router-dom";
                 {/* <li class="collection-header"><h1>Recipes</h1></li> */}
                     {this.props.results && this.props.results.hits.map(result => (
                             <li class="collection-item" key={result.id}>
-                                <h3>{result.recipe.label}</h3>
+                                <h4>{result.recipe.label}</h4>
                                 <img alt={result.recipe.label} className="img-fluid" src={result.recipe.image} />
                                 <br></br>
                                 <a href={result.recipe.url}>View Recipe</a>
                                 <br></br>
-                                <ul class="collection">
+                                <ul class="health-labels">
                                     <li>
                                         {result.recipe.healthLabels.map((item) => (<li>{item}</li>))}
                                     </li>
                                 </ul>
+                                <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
                             </li>
                     ))}
                     {this.props.results && console.log(this.props.results)}
